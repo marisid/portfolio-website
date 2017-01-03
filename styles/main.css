@@ -1,0 +1,31 @@
+@import url("normalize.css");
+@import url("fonts.css");
+
+/*Set up base rules*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova Reg", Helvetica, sans-serif;;
+  font-size: 16px;
+  line-height: calc(1.5 * 16px);
+  color: #4d4d4d;
+}
+
+/*Navigation menu*/
+
+/*Main content*/
+
+/*About section*/
+
+/*Contact section*/
+
+/*Media queries to scale up to wider screens*/
+
+@media all and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
