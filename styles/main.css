@@ -8,10 +8,31 @@
 }
 
 body {
-  font-family: "Proxima Nova Reg", Helvetica, sans-serif;;
+  font-family: "Proxima Nova Reg", Helvetica, sans-serif;
   font-size: 14px;
   line-height: calc(1.5 * 16px);
-  color: #4d4d4d;
+  color: #3A3E56;
+}
+
+/*Classes for different font styles*/
+.bold {
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+}
+
+.light {
+  font-family: "Proxima Nova Light", Helvetica, sans-serif;
+}
+
+.italic {
+  font-family: "Proxima Nova Reg It", Helvetica, sans-serif;
+}
+
+.bold-italic {
+  font-family: "Proxima Nova Bold It", Helvetica, sans-serif;
+}
+
+.light-italic {
+  font-family: "Proxima Nova Light It", Helvetica, sans-serif;
 }
 
 /*Navigation menu*/
