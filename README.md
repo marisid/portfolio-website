@@ -11,8 +11,9 @@
   + Single page with vertical scrolling
   + Font selection: `Arvo` for headings and `Proxima Nova` for main body text
   + Color scheme: black and white, grayscale and orange #ff4422 #fd8a58
-  + Navigation menu: About | My work | Contact
-  + Menu appearing from left, no hamburger icon
+  + Navigation menu: About | My work | Contact (order to be confirmed)
+  + Menu fixed on top, white transparent background, no hamburger icon
+  + Logo animation in navigation menu on first-time loading
 
 ### When?
 - Build prototype in a week.
