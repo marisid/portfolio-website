@@ -5,7 +5,7 @@
 - Publish on `gh-pages` but also on personal domain.
 
 ### How?
-- Front-end project using HTML5, CSS3 and vanilla JS.
+Front-end project using HTML5, CSS3 and vanilla JS.  
 ##### Design decisions
   + Mobile-first approach
   + Single page with vertical scrolling
