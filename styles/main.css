@@ -72,13 +72,14 @@ h3 {
 .banner {
   background-color: #fff;
   width: 100vw;
+  height: 95px;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
 }
 
-.logo {
+.logo-container {
   width:100%;
   padding: 0.67em 0 0 0;
 }
@@ -106,7 +107,7 @@ h3 {
   display: block;
   width: 100%;
   position: relative;
-  top: -1em;
+  top: -1.35em;
 }
 
 .navigation__list {
