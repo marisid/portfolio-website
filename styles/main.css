@@ -8,11 +8,35 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   font-family: "Proxima Nova Reg", Helvetica, sans-serif;
   font-size: 16px;
-  line-height: calc(1.5 * 16px);
-  color: #555;
+  line-height: 1.25em;
+  color: #222;
+}
+
+a {
+text-decoration: none;
+color: #ff4422;
+}
+
+a:hover, a:active, a:focus:hover {
+text-decoration: underline;
+text-shadow: 0px 1px 0.5px #fd8a58;
+}
+
+/*Based on Robert's Bringhurst norms*/
+
+h1 { font-size: 2.0em; }
+
+h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615em
+}
+
+h3 {
+  font-size: 1.375em;
+  list-style: 1.13636364em;
 }
 
 /*Classes for different font styles*/
@@ -37,6 +61,60 @@ body {
 }
 
 /*Navigation menu*/
+.banner {
+  background-color: #fff;
+  width: 100vw;
+  text-align: center;
+}
+
+.logo {
+  width:100%;
+  margin: 0.67em 0 0 0;
+}
+
+.logo__my-name {
+  display: inline-block;
+  font-family: 'Arvo', Trebuchet, serif;
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.navigation {
+  display: block;
+  width: 100%;
+  position: relative;
+  top: -1em;
+}
+
+.navigation__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.navigation__list__item {
+  display: inline;
+  padding-right: 0.5rem;
+}
+
+.navigation__list__item:not(:last-child) {
+  border-right: 2px solid #ff4422;
+}
+
+.navigation__list__item a {
+  font-family: 'Arvo', Trebuchet, serif;
+  padding: 0 0.2em;
+  font-weight: 700;
+}
+
+/*SVG logo animation */
+/*.logo__svg {
+  display: block;
+  position: absolute;
+  left: calc(50% - 60px);
+  bottom: calc(50% - 45px);
+  background-color: #fff;
+}*/
 
 /*Main content*/
 
@@ -45,9 +123,6 @@ body {
 /*Contact section*/
 
 /*Media queries to scale up to wider screens*/
-
-@media all and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+@media screen and (min-width: 1400px) {
+  html { font-size: 1.25em; }
 }
