@@ -26,4 +26,55 @@
     <path d="m395.59816 496.2255a17.14608 17.14608 0 1 0-34.29216 0 17.14608 17.14608 0 0 0 34.29216 0z" id="path3401" inkscape:connector-curvature="0" style="fill:none;stroke:#000"/>
   </g>
   <g inkscape:label="Defpoints" inkscape:groupmode="layer" id="g3403" transform="translate(-300.94309,-432.53959)"/>
+  <!-- Add animation as inline style to embed svg directly in html -->
+  <style type="text/css">
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+     opacity: 0.0;
+    }
+    to {
+      opacity: 1.0;
+    }
+  }
+
+  /* Animation for first letter mu */
+
+  #path3399 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 3.5s linear;
+    animation-fill-mode: forwards;
+  }
+
+  /* Animation for second letter sigma - inner line*/
+
+  #path3401 {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 1.5s linear 1s;
+    animation-fill-mode: forwards;
+  }
+
+  /* Animation for second letter sigma - outer line*/
+
+  #path3397 {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 3s linear 1s;
+    animation-fill-mode: forwards;
+  }
+  /* Animation for dot*/
+
+  #path3395 {
+    animation: fadeIn 2.5s ease-in;
+    animation-fill-mode: forwards;
+  }
+  </style>
 </svg>
