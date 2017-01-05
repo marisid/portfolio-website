@@ -159,6 +159,25 @@ body.scrolled .banner {
 
 /*Contact section*/
 
+/*Footer*/
+.footer {
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fd8a58;
+  font-size: 0.75em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+}
+
+.footer__copyright {
+  margin: 0;
+  line-height: 30px;
+}
+
 /*Media queries to scale up to wider screens*/
 @media screen and (min-width: 1400px) {
   html { font-size: 1.25em; }
