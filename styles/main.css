@@ -15,6 +15,10 @@ html {
   color: #222;
 }
 
+body {
+  background-color: pink;
+}
+
 a {
 text-decoration: none;
 color: #ff4422;
@@ -65,11 +69,14 @@ h3 {
   background-color: #fff;
   width: 100vw;
   text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .logo {
   width:100%;
-  margin: 0.67em 0 0 0;
+  padding: 0.67em 0 0 0;
 }
 
 .logo__my-name {
@@ -77,6 +84,18 @@ h3 {
   font-family: 'Arvo', Trebuchet, serif;
   font-weight: 400;
   vertical-align: top;
+}
+
+.logo__svg {
+  pointer-events: none;
+}
+
+.logo__link {
+  display: inline-block;
+}
+
+.logo__link:hover, .logo__link:active, .logo__link:focus:active {
+  cursor: pointer;
 }
 
 .navigation {
@@ -94,7 +113,6 @@ h3 {
 
 .navigation__list__item {
   display: inline;
-  padding-right: 0.5rem;
 }
 
 .navigation__list__item:not(:last-child) {
@@ -103,7 +121,7 @@ h3 {
 
 .navigation__list__item a {
   font-family: 'Arvo', Trebuchet, serif;
-  padding: 0 0.2em;
+  padding: 0 0.5rem 0.5rem;
   font-weight: 700;
 }
 
@@ -125,4 +143,14 @@ h3 {
 /*Media queries to scale up to wider screens*/
 @media screen and (min-width: 1400px) {
   html { font-size: 1.25em; }
+}
+
+@media screen and (min-width: 400px) {
+  .banner {
+    text-align: left;
+    padding: 0 1rem;
+  }
+  .navigation__list {
+    text-align: right;
+  }
 }
