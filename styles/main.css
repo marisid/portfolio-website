@@ -16,7 +16,7 @@ html {
 }
 
 /*body {
-  background-color: #fd8a58;
+  background-color: #333;
 }*/
 
 a {
@@ -148,11 +148,15 @@ body.scrolled .banner {
 
 .project-container__figure {
   text-align: center;
-  margin: 2em 0;
+  margin: 4em 0;
 }
 
 .project-container__figure img {
   width: 90vw;
+}
+
+.project-container__figure img.half-width {
+  width: 45vw;
 }
 
 /*About section*/
@@ -167,9 +171,6 @@ body.scrolled .banner {
   vertical-align: middle;
   background-color: #fd8a58;
   font-size: 0.75em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   margin: auto auto;
 }
 
