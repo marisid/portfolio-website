@@ -35,14 +35,19 @@ text-shadow: 0px 1px 0.5px #fd8a58;
 
 /*Based on Robert's Bringhurst norms*/
 
-h1 { font-size: 2.0em; }
+h1 {
+  font-family: 'Arvo', Trebuchet, serif;
+  font-size: 2.0em;
+}
 
 h2 {
+  font-family: 'Arvo', Trebuchet, serif;
   font-size: 1.625em;
   line-height: 1.15384615em
 }
 
 h3 {
+  font-family: 'Arvo', Trebuchet, serif;
   font-size: 1.375em;
   list-style: 1.13636364em;
 }
@@ -77,6 +82,7 @@ h3 {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 .logo-container {
@@ -86,7 +92,6 @@ h3 {
 
 .logo__my-name {
   display: inline-block;
-  font-family: 'Arvo', Trebuchet, serif;
   font-weight: 400;
   vertical-align: top;
 }
@@ -136,15 +141,68 @@ body.scrolled .banner {
   background-color: rgba(255,255,255, 0.9);
 }
 
-/*Project content*/
-
+/*Main content*/
 .main-content {
   width: 100vw;
   margin-top: 150px;
 }
 
+/*About section*/
+
+.about-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.profile-picture {
+  width: 120px;
+  border-radius: 100%;
+  float: right;
+  margin: 0 1em;
+}
+
+.profile-title {
+  height: 120px;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.profile-title a {
+  font-size: 1rem;
+  display: block;
+  background-color: #fd8a58;
+  color: #fff;
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+}
+
+.profile-title a:hover, a:active, a:focus:hover {
+  box-shadow: 0px 1px 0.5px #fd8a58;
+  background-color: #ff4422;
+  text-decoration: none;
+}
+
+.scroll-down-icon {
+  visibility: hidden;
+}
+
+/*Project content*/
+
 .project-container {
   width: 100%;
+  margin-top: 3em;
+}
+
+.project-container__heading {
+  color: #ff4422;
+  padding-left: 10%;
+  text-shadow: 0px 1px 0.5px #fd8a58;
+
 }
 
 .project-container__figure {
@@ -159,8 +217,6 @@ body.scrolled .banner {
 .project-container__figure img.half-width {
   width: 45vw;
 }
-
-/*About section*/
 
 /*Contact section*/
 
@@ -185,12 +241,28 @@ body.scrolled .banner {
   html { font-size: 1.25em; }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 375px) and (orientation: portrait) {
   .banner {
     text-align: left;
     padding: 0 1rem;
   }
   .navigation__list {
     text-align: right;
+  }
+  .about-section {
+    height: calc(100vh - 150px);
+  }
+  .profile-title {
+    height: 200px;
+  }
+  .profile-title a {
+    position: relative;
+    margin-top: 1rem;
+  }
+  .scroll-down-icon {
+    visibility: visible;
+    color: #ff4422;
+    font-size: 1rem;
+    text-align: center;
   }
 }
