@@ -135,12 +135,12 @@ h3 {
   font-weight: 700;
 }
 
-/* add offset to all navigation link targets to make them visible below the header*/
+/* Add offset to all navigation link targets to make them visible below the header*/
 .target-offset::before {
   content:"";
   display: block;
-  height: 100px; /* fixed header height*/
-  margin: -100px 0 0; /* negative fixed header height */
+  height: 95px; /* fixed header height*/
+  margin: -95px 0 0; /* negative fixed header height */
 }
 
 /*control header opacity through window scrolling*/
@@ -152,7 +152,8 @@ body.scrolled .banner {
 /*Main content*/
 .main-content {
   width: 100vw;
-  margin-top: 150px;
+  margin-top: 95px;
+  padding-top: 2em;
 }
 
 /*About section*/
@@ -160,6 +161,7 @@ body.scrolled .banner {
 .about-container {
   width: 85%;
   margin: 0 auto;
+  height: calc(100vh);
 }
 
 .profile-picture {
@@ -203,7 +205,7 @@ body.scrolled .banner {
 
 .project-container {
   width: 100%;
-  margin-top: 3em;
+  /*margin-top: 3em;*/
 }
 
 .project-container__heading {
@@ -289,11 +291,8 @@ body.scrolled .banner {
   }
 }
 
-/*Adjust about section for large smartphones and tablets*/
+/*Adjust about section for large smartphones and small tablets*/
 @media screen and (min-width: 360px) and (orientation: portrait) {
-  .about-section {
-    height: calc(100vh - 150px);
-  }
   .profile-title {
     height: 200px;
   }
@@ -305,6 +304,7 @@ body.scrolled .banner {
     visibility: visible;
     color: #ff4422;
     font-size: 1rem;
-    text-align: center;
+    text-align: right;
+
   }
 }
