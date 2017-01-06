@@ -16,7 +16,7 @@ html {
 }
 
 /*body {
-  background-color: #fd8a58;
+  background-color: #333;
 }*/
 
 a {
@@ -72,13 +72,14 @@ h3 {
 .banner {
   background-color: #fff;
   width: 100vw;
+  height: 95px;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
 }
 
-.logo {
+.logo-container {
   width:100%;
   padding: 0.67em 0 0 0;
 }
@@ -106,7 +107,7 @@ h3 {
   display: block;
   width: 100%;
   position: relative;
-  top: -1em;
+  top: -1.35em;
 }
 
 .navigation__list {
@@ -148,11 +149,15 @@ body.scrolled .banner {
 
 .project-container__figure {
   text-align: center;
-  margin: 2em 0;
+  margin: 4em 0;
 }
 
 .project-container__figure img {
   width: 90vw;
+}
+
+.project-container__figure img.half-width {
+  width: 45vw;
 }
 
 /*About section*/
@@ -167,9 +172,6 @@ body.scrolled .banner {
   vertical-align: middle;
   background-color: #fd8a58;
   font-size: 0.75em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   margin: auto auto;
 }
 
