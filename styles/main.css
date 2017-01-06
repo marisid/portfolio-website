@@ -4,8 +4,10 @@
 
 /*Set up base rules*/
 
-* {
-  box-sizing: border-box;
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -15,9 +17,10 @@ html {
   color: #222;
 }
 
-/*body {
-  background-color: #333;
-}*/
+body {
+  width: 99.9%;
+  /*max-width: 1200px;*/
+}
 
 a {
 text-decoration: none;
@@ -73,17 +76,10 @@ h3 {
   font-family: "Proxima Nova Light It", Helvetica, sans-serif;
 }
 
-/*Full width columns for mobile view*/
-[class*="col-"] {
-    width: 100%;
-    float: left;
-    padding: 15px;
-}
-
 /*Navigation menu*/
 .banner {
   background-color: #fff;
-  width: 100vw;
+  width: 100%;
   height: 95px;
   text-align: center;
   position: fixed;
@@ -161,24 +157,33 @@ body.scrolled .scroll-down-icon {
 
 
 /*Main content*/
-.main-content {
-  width: 100vw;
-  margin-top: 95px;
+
+.container {
+  width: 100%;
+}
+
+.container--background-dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.main-container {
+  margin: 95px auto 0;
   padding-top: 2em;
 }
 
 /*About section*/
 
 .about-container {
-  width: 85%;
   margin: 0 auto;
+  padding: 0 10%;
+  height: 100vh;
 }
 
 .profile-picture {
   width: 120px;
   border-radius: 100%;
   float: right;
-  margin: 0 1em;
 }
 
 .profile-title {
@@ -211,43 +216,59 @@ body.scrolled .scroll-down-icon {
   visibility: hidden;
 }
 
-/*Project content*/
-
-.project-container {
-  width: 100%;
-  /*margin-top: 3em;*/
+.profile-details {
+  max-width: 500px;
 }
+
+/*Project content*/
 
 .project-container__heading {
   color: #ff4422;
   padding-left: 10%;
-  text-shadow: 0px 1px 0.5px #fd8a58;
-
+  text-shadow: 0px 0.5px 0px #aaa;
 }
 
 .project-container__figure {
-  text-align: center;
-  margin: 4em 0;
+  margin: 2% 0;
 }
 
 .project-container__figure img {
-  width: 90vw;
+  width: 100%;
 }
 
-.project-container__figure img.half-width {
-  width: 45vw;
+.project-container__figure figcaption {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.project-container__link {
+  text-decoration: underline;
+}
+
+/* Clearfix */
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix {
+  display: inline-block;
+  clear:both;
 }
 
 /*Contact section*/
 .contact-container {
-  width:100%;
   text-align: left;
-  padding: 10%;
+  padding: 5% 10%;
 }
 
 .contact-container__heading {
   color: #ff4422;
-  text-shadow: 0px 1px 0.5px #fd8a58;
 }
 
 .contact__icons-list {
@@ -260,7 +281,7 @@ body.scrolled .scroll-down-icon {
 }
 
 .contact__icons-list__item a {
-  color: #333;
+  color: #fff;
   font-size: 1.8em;
 }
 
