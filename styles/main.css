@@ -227,6 +227,34 @@ body.scrolled .banner {
 }
 
 /*Contact section*/
+.contact-container {
+  width:100%;
+  text-align: left;
+  padding: 10%;
+}
+
+.contact-container__heading {
+  color: #ff4422;
+  text-shadow: 0px 1px 0.5px #fd8a58;
+}
+
+.contact__icons-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact__icons-list__item {
+  display: inline;
+}
+
+.contact__icons-list__item a {
+  color: #333;
+  font-size: 1.8em;
+}
+
+.contact__icons-list__item a:hover, a:active, a:focus:hover {
+  color: #ff4422;
+}
 
 /*Footer*/
 .footer {
@@ -249,14 +277,20 @@ body.scrolled .banner {
   html { font-size: 1.25em; }
 }
 
-@media screen and (min-width: 360px) and (orientation: portrait) {
+/*Realign positioning of elements in the banner*/
+
+@media screen and (min-width: 400px) {
   .banner {
     text-align: left;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
   .navigation__list {
     text-align: right;
   }
+}
+
+/*Adjust about section for large smartphones and tablets*/
+@media screen and (min-width: 360px) and (orientation: portrait) {
   .about-section {
     height: calc(100vh - 150px);
   }
