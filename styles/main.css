@@ -241,7 +241,7 @@ body.scrolled .banner {
   html { font-size: 1.25em; }
 }
 
-@media screen and (min-width: 375px) and (orientation: portrait) {
+@media screen and (min-width: 360px) and (orientation: portrait) {
   .banner {
     text-align: left;
     padding: 0 1rem;
