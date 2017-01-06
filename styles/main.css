@@ -73,6 +73,13 @@ h3 {
   font-family: "Proxima Nova Light It", Helvetica, sans-serif;
 }
 
+/*Full width columns for mobile view*/
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
 /*Navigation menu*/
 .banner {
   background-color: #fff;
@@ -143,11 +150,15 @@ h3 {
   margin: -95px 0 0; /* negative fixed header height */
 }
 
-/*control header opacity through window scrolling*/
-
+/*control elements styling on window scrolling*/
 body.scrolled .banner {
   background-color: rgba(255,255,255, 0.9);
 }
+
+body.scrolled .scroll-down-icon {
+  visibility: hidden;
+}
+
 
 /*Main content*/
 .main-content {
@@ -161,7 +172,6 @@ body.scrolled .banner {
 .about-container {
   width: 85%;
   margin: 0 auto;
-  height: calc(100vh);
 }
 
 .profile-picture {
