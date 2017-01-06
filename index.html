@@ -7,6 +7,7 @@
     <link href="styles/normalize.css" type="text/css" rel="stylesheet">
     <link href="styles/main.css" type="text/css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <title>Marina Sideri | Web developer | Portfolio | Contact</title>
   </head>
   <body>
@@ -21,14 +22,27 @@
       </div >
       <nav class="navigation">
         <ul class="navigation__list">
-          <li class="navigation__list__item"><a href="#projects">Projects</a></li>
-          <li class="navigation__list__item"><a href="#about">About</a></li>
+          <li class="navigation__list__item"><a href="#projects">About</a></li>
+          <li class="navigation__list__item"><a href="#about">Projects</a></li>
           <li class="navigation__list__item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <div class="main-content">
+      <div id="about" class="about-container">
+        <section class="about-container__information">
+          <img class="profile-picture" src="images/marina-sideri-photo.jpg" alt="Profile picture of Marina Sideri">
+          <h3 class="profile-title bold">Full-stack JavaScript developer <a href="#contact">Contact</a></h3>
+          <p class="profile-details">Marina is a web developer, currently learning and working with <a href="http://www.foundersandcoders.com/" target="_blank">Founders and Coders</a>.</p>
+          <p class="profile-details">With a civil engineering background and more than three years of experience in technical consultancy roles, she decided to transfer her engineering thinking into the creative world of web development.</p>
+          <p class="profile-details">She loves building nice functional apps and websites and learning new technologies.</p>
+        </section>
+        <div class="scroll-down-icon">
+          <i class="fa fa-arrow-circle-down"> Scroll down</i>
+        </div>
+      </div>
       <div id="projects" class="project-container">
+        <h1 class="project-container__heading">Projects</h1>
         <figure id="quote-machine" class="project-container__figure">
           <img src="images/quote_machine/quote_machine_desktop.png" alt="Desktop view of my quote machine generator">
           <figcaption class="bold"><a href="#">Quote machine generator</a></figcaption>
@@ -67,7 +81,6 @@
           <figcaption class="bold"><a href="#">GitPom app</a></figcaption>
         </figure>
       </div>
-      <div id="about" class="container"></div>
       <div id="contact" class="container"></div>
     </div>
     <footer class="footer">
