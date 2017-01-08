@@ -52,7 +52,7 @@ h2 {
 h3 {
   font-family: 'Arvo', Trebuchet, serif;
   font-size: 1.375em;
-  list-style: 1.13636364em;
+  line-height: 1.13636364em;
 }
 
 /*Classes for different font styles*/
@@ -155,7 +155,6 @@ body.scrolled .scroll-down-icon {
   visibility: hidden;
 }
 
-
 /*Main content*/
 
 .container {
@@ -178,6 +177,9 @@ body.scrolled .scroll-down-icon {
   margin: 0 auto;
   padding: 0 10%;
   height: 100vh;
+  background: url("../images/about/keyboard-background-portrait.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .profile-picture {
@@ -207,7 +209,6 @@ body.scrolled .scroll-down-icon {
 }
 
 .profile-title a:hover, a:active, a:focus:hover {
-  box-shadow: 0px 1px 0.5px #fd8a58;
   background-color: #ff4422;
   text-decoration: none;
 }
@@ -217,7 +218,7 @@ body.scrolled .scroll-down-icon {
 }
 
 .profile-details {
-  max-width: 500px;
+  max-width: 550px;;
 }
 
 /*Project content*/
@@ -310,8 +311,18 @@ body.scrolled .scroll-down-icon {
   html { font-size: 1.25em; }
 }
 
-/*Realign positioning of elements in the banner*/
+@media screen and (min-width: 600px) {
+  .about-container {
+    background-image: url("../images/about/keyboard-background-landscape.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    text-shadow: 0 1px 0 #111;
+    position: relative;
+  }
+}
 
+
+/*Realign positioning of elements in the banner*/
 @media screen and (min-width: 400px) {
   .banner {
     text-align: left;
@@ -324,9 +335,6 @@ body.scrolled .scroll-down-icon {
 
 /*Adjust about section for large smartphones and small tablets*/
 @media screen and (min-width: 360px) and (orientation: portrait) {
-  .profile-title {
-    height: 200px;
-  }
   .profile-title a {
     position: relative;
     margin-top: 1rem;
@@ -336,6 +344,5 @@ body.scrolled .scroll-down-icon {
     color: #ff4422;
     font-size: 1rem;
     text-align: right;
-
   }
 }
