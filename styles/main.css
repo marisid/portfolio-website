@@ -151,10 +151,6 @@ body.scrolled .banner {
   background-color: rgba(255,255,255, 0.9);
 }
 
-body.scrolled .scroll-down-icon {
-  visibility: hidden;
-}
-
 /*Main content*/
 
 .container {
@@ -183,42 +179,38 @@ body.scrolled .scroll-down-icon {
 }
 
 .profile-picture {
-  width: 120px;
+  display: block;
+  width: 60px;
   border-radius: 100%;
-  float: right;
+  margin: 5px auto;
 }
 
-.profile-title {
-  height: 120px;
+.about-container__heading {
   margin: 0;
-  position: relative;
   z-index: 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #111;
 }
 
-.profile-title a {
+.profile-details:first-child {
+  margin-top: 0;
+}
+
+.about-container__contact-link {
   font-size: 1rem;
   display: block;
-  background-color: #fd8a58;
+  background-color: #ff4422;
   color: #fff;
-  width: 80px;
+  width: 100px;
   padding: 5px;
   text-align: center;
   border-radius: 2px;
-  position: absolute;
-  bottom: 0;
+  margin: 0 auto;
 }
 
 .profile-title a:hover, a:active, a:focus:hover {
-  background-color: #ff4422;
+  background-color: #fd8a58;
   text-decoration: none;
-}
-
-.scroll-down-icon {
-  visibility: hidden;
-}
-
-.profile-details {
-  max-width: 550px;;
 }
 
 /*Project content*/
@@ -306,23 +298,15 @@ body.scrolled .scroll-down-icon {
   line-height: 30px;
 }
 
-/*Media queries to scale up to wider screens*/
-@media screen and (min-width: 1400px) {
-  html { font-size: 1.25em; }
-}
-
-@media screen and (min-width: 600px) {
-  .about-container {
-    background-image: url("../images/about/keyboard-background-landscape.jpg");
-    background-size: cover;
-    background-repeat:no-repeat;
-    text-shadow: 0 1px 0 #111;
-    position: relative;
+/*Adjust about section for large smartphones and small tablets*/
+@media screen and (min-width: 360px) and (orientation: portrait) {
+  .profile-picture {
+    width: 120px;
+    margin: 5% auto;
   }
 }
 
-
-/*Realign positioning of elements in the banner*/
+/*Realign elements in the banner for large smartphones*/
 @media screen and (min-width: 400px) {
   .banner {
     text-align: left;
@@ -331,18 +315,38 @@ body.scrolled .scroll-down-icon {
   .navigation__list {
     text-align: right;
   }
+  .profile-picture {
+    margin: 10% auto;
+  }
 }
 
-/*Adjust about section for large smartphones and small tablets*/
-@media screen and (min-width: 360px) and (orientation: portrait) {
-  .profile-title a {
+/*Media queries to scale up to wider screens*/
+@media screen and (min-width: 600px) {
+  .about-container {
+    background-image: url("../images/about/keyboard-background-landscape.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    text-shadow: 0 1px 0 #111;
     position: relative;
-    margin-top: 1rem;
   }
-  .scroll-down-icon {
-    visibility: visible;
-    color: #ff4422;
-    font-size: 1rem;
-    text-align: right;
+
+  .about-container__text {
+    clear: both;
   }
+
+  .about-container__heading {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .profile-picture {
+    width: 120px;
+    float: right;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html { font-size: 1.25em; }
 }
