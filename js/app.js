@@ -1,3 +1,4 @@
+(function() {
 // check window scrolling
 function windowScroll() {
   window.addEventListener('scroll', function () {
@@ -10,3 +11,4 @@ function windowScroll() {
 }
 
 window.onload = windowScroll;
+})()
