@@ -28,7 +28,7 @@ color: #ff4422;
 }
 
 a:focus {
-  border: 0.5px solid #fd8a58;
+  border: none;
 }
 
 a:hover, a:active, a:focus:hover {
@@ -52,7 +52,7 @@ h2 {
 h3 {
   font-family: 'Arvo', Trebuchet, serif;
   font-size: 1.375em;
-  list-style: 1.13636364em;
+  line-height: 1.13636364em;
 }
 
 /*Classes for different font styles*/
@@ -151,11 +151,6 @@ body.scrolled .banner {
   background-color: rgba(255,255,255, 0.9);
 }
 
-body.scrolled .scroll-down-icon {
-  visibility: hidden;
-}
-
-
 /*Main content*/
 
 .container {
@@ -178,46 +173,43 @@ body.scrolled .scroll-down-icon {
   margin: 0 auto;
   padding: 0 10%;
   height: 100vh;
+  background: url("../images/about/keyboard-background-portrait.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .profile-picture {
-  width: 120px;
+  display: block;
+  width: 60px;
   border-radius: 100%;
-  float: right;
+  margin: 5px auto;
 }
 
-.profile-title {
-  height: 120px;
+.about-container__heading {
   margin: 0;
-  position: relative;
   z-index: 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #111;
 }
 
-.profile-title a {
+.profile-details:first-child {
+  margin-top: 0;
+}
+
+.about-container__contact-link {
   font-size: 1rem;
   display: block;
-  background-color: #fd8a58;
+  background-color: #ff4422;
   color: #fff;
-  width: 80px;
+  width: 100px;
   padding: 5px;
   text-align: center;
   border-radius: 2px;
-  position: absolute;
-  bottom: 0;
+  margin: 0 auto;
 }
 
 .profile-title a:hover, a:active, a:focus:hover {
-  box-shadow: 0px 1px 0.5px #fd8a58;
-  background-color: #ff4422;
   text-decoration: none;
-}
-
-.scroll-down-icon {
-  visibility: hidden;
-}
-
-.profile-details {
-  max-width: 500px;
 }
 
 /*Project content*/
@@ -239,7 +231,7 @@ body.scrolled .scroll-down-icon {
 .project-container__figure figcaption {
   width: 100%;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 0.8em;
 }
 
 .project-container__link {
@@ -278,6 +270,7 @@ body.scrolled .scroll-down-icon {
 
 .contact__icons-list__item {
   display: inline;
+  margin-right: 0.5em;
 }
 
 .contact__icons-list__item a {
@@ -305,13 +298,15 @@ body.scrolled .scroll-down-icon {
   line-height: 30px;
 }
 
-/*Media queries to scale up to wider screens*/
-@media screen and (min-width: 1400px) {
-  html { font-size: 1.25em; }
+/*Adjust about section for large smartphones and small tablets*/
+@media screen and (min-width: 360px) and (orientation: portrait) {
+  .profile-picture {
+    width: 120px;
+    margin: 3% auto;
+  }
 }
 
-/*Realign positioning of elements in the banner*/
-
+/*Realign elements in the banner for large smartphones*/
 @media screen and (min-width: 400px) {
   .banner {
     text-align: left;
@@ -322,20 +317,39 @@ body.scrolled .scroll-down-icon {
   }
 }
 
-/*Adjust about section for large smartphones and small tablets*/
-@media screen and (min-width: 360px) and (orientation: portrait) {
-  .profile-title {
-    height: 200px;
+/*Media queries to scale up to wider screens*/
+@media screen and (min-width: 640px) {
+  .about-container {
+    background: linear-gradient(-225deg, rgba(30,30,30,0.6) 30%, rgba(46,46,46,0.5) 80%), url("../images/about/keyboard-background-landscape.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    text-shadow: 0 1px 0 #111;
   }
-  .profile-title a {
-    position: relative;
-    margin-top: 1rem;
-  }
-  .scroll-down-icon {
-    visibility: visible;
-    color: #ff4422;
-    font-size: 1rem;
-    text-align: right;
 
+  .about-container__text {
+    clear: both;
   }
+
+  .about-container__heading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .profile-details {
+    max-width: 580px;
+    margin: 1% auto;
+    text-align: justify;
+  }
+
+  .profile-picture {
+    width: 140px;
+    margin: 1.5% auto;
+    /*float: left;
+    display: inline-block;
+    margin: 0;*/
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html { font-size: 1.25em; }
 }
