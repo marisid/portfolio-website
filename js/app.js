@@ -10,5 +10,9 @@ function windowScroll() {
   });
 }
 
-window.onload = windowScroll;
+window.onload = function() {
+  // remove cover div with loading icon once page has loaded
+  document.getElementById('window-loading-cover').style.visibility = 'hidden';
+  windowScroll();
+}
 })()
