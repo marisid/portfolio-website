@@ -220,7 +220,7 @@ body.scrolled .banner {
   display: inline-block;
   background-color: #ff4422;
   color: #fff;
-  width: 100px;
+  width: 110px;
   padding: 5px;
   text-align: center;
   border-radius: 3px;
@@ -240,10 +240,7 @@ body.scrolled .banner {
   color: #ff4422;
   padding-left: 10%;
   text-shadow: 0px 0.5px 0px #aaa;
-}
-
-.project-container__figure {
-  margin: 2% 0;
+  margin: 2em 0;
 }
 
 .project-container__figure img {
@@ -256,8 +253,8 @@ body.scrolled .banner {
   margin-bottom: 0.8em;
 }
 
-.project-container__link {
-  text-decoration: underline;
+.project-container__caption {
+  font-size: 1.15em;
 }
 
 /* Clearfix */

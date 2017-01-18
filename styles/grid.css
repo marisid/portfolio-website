@@ -3,20 +3,12 @@
     box-sizing: border-box;
     width: 100%;
     float: left;
-    padding: 0 2%;
-}
-
-*[class*="col-"]:first-child {
-  padding-left: 4%;
-}
-
-*[class*="col-"]:last-child {
-  padding-right: 2%;
+    padding: 0 12%;
+    margin: 5% 0;
 }
 
 .row {
   width: 100%;
-  margin-bottom: 5%;
 }
 
 .row::after {
@@ -28,13 +20,26 @@
 /* Grid layout for desktop view */
 
 @media screen and (min-width: 600px) {
-    .col-1 {width: 8.33%;}
+    *[class*="col-"] {
+      padding: 0 2%;
+      margin: 0;
+    }
+
+    *[class*="col-"]:first-child {
+      padding-left: 4%;
+    }
+
+    *[class*="col-"]:last-child {
+      padding-right: 4%;
+    }
+
+    .row {
+      margin-bottom: 5%;
+    }
+
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
     .col-4 {width: 33.33%;}
     .col-6 {width: 50%;}
-    .col-8 {width: 66.66%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
