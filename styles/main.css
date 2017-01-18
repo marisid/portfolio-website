@@ -226,11 +226,23 @@ body.scrolled .banner {
   border-radius: 3px;
 }
 
+.about-container__link-button:hover, .about-container__link-button:active, .about-container__link-button:focus:hover {
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 1px 2px 1px #333;
+}
+
+.about-container__link-button:active {
+  position: relative;
+  top: 1px;
+  left: 0.5px;
+}
+
 .cv-link {
   margin-right: 1em;
 }
 
-.profile-title a:hover, a:active, a:focus:hover {
+.profile-title a:hover, .profile-title a:active, .profile-title a:focus:hover {
   text-decoration: none;
 }
 
@@ -250,11 +262,11 @@ body.scrolled .banner {
 .project-container__figure figcaption {
   width: 100%;
   text-align: center;
-  margin-bottom: 0.8em;
 }
 
 .project-container__caption {
   font-size: 1.15em;
+  min-height: 40px;
 }
 
 /* Clearfix */
@@ -297,7 +309,7 @@ body.scrolled .banner {
   font-size: 1.8em;
 }
 
-.contact__icons-list__item a:hover, a:active, a:focus:hover {
+.contact__icons-list__item a:hover, .contact__icons-list__item a:active, .contact__icons-list__item a:focus:hover {
   color: #ff4422;
 }
 
