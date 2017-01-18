@@ -11,7 +11,7 @@
 }
 
 html {
-  font-family: "Proxima Nova Reg", Helvetica, sans-serif;
+  font-family: "Proxima Nova Reg", sans-serif, Helvetica;
   font-size: 16px;
   line-height: 1.25em;
   color: #222;
@@ -36,7 +36,7 @@ text-decoration: underline;
 text-shadow: 0px 1px 0.5px #fd8a58;
 }
 
-/*Based on Robert's Bringhurst norms*/
+/*Based on Robert's Bringhurst norms for phones and small tablets*/
 
 h1 {
   font-family: 'Arvo', Trebuchet, serif;
@@ -46,7 +46,7 @@ h1 {
 h2 {
   font-family: 'Arvo', Trebuchet, serif;
   font-size: 1.625em;
-  line-height: 1.15384615em
+  line-height: 1.15384615em;
 }
 
 h3 {
@@ -182,15 +182,15 @@ body.scrolled .banner {
 
 .main-container {
   margin: 95px auto 0;
-  padding-top: 2em;
+
 }
 
 /*About section*/
 
 .about-container {
   margin: 0 auto;
-  padding: 0 10%;
-  height: 100vh;
+  padding: 0 10% 2em;
+  min-height: 100vh;
   background: url("../images/about/keyboard-background-portrait.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -205,25 +205,29 @@ body.scrolled .banner {
 
 .about-container__heading {
   margin: 0;
+  padding-top: 1em;
   z-index: 0;
   text-align: center;
-  text-shadow: 0 1px 0 #111;
+  text-shadow: 0 0.5px 0 #111;
 }
 
-.profile-details:first-child {
-  margin-top: 0;
+
+.about-container__links {
+  text-align: center;
 }
 
-.about-container__contact-link {
-  font-size: 1rem;
-  display: block;
+.about-container__link-button {
+  display: inline-block;
   background-color: #ff4422;
   color: #fff;
   width: 100px;
   padding: 5px;
   text-align: center;
-  border-radius: 2px;
-  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.cv-link {
+  margin-right: 1em;
 }
 
 .profile-title a:hover, a:active, a:focus:hover {
@@ -337,15 +341,22 @@ body.scrolled .banner {
 
 /*Media queries to scale up to wider screens*/
 @media screen and (min-width: 640px) {
+  /*Based on Robert's Bringhurst norms for phones and small tablets*/
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25em;
+  }
+
+  h3 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+  }
+
   .about-container {
     background: linear-gradient(-225deg, rgba(30,30,30,0.6) 30%, rgba(46,46,46,0.5) 80%), url("../images/about/keyboard-background-landscape.jpg");
     background-size: cover;
     background-repeat:no-repeat;
-    text-shadow: 0 1px 0 #111;
-  }
-
-  .about-container__text {
-    clear: both;
   }
 
   .about-container__heading {
@@ -354,17 +365,17 @@ body.scrolled .banner {
   }
 
   .profile-details {
-    max-width: 580px;
-    margin: 1% auto;
+    max-width: 660px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    margin: 1.5% auto;
     text-align: justify;
+    text-transform: 0 1 px 0 #333;
   }
 
   .profile-picture {
     width: 140px;
     margin: 1.5% auto;
-    /*float: left;
-    display: inline-block;
-    margin: 0;*/
   }
 }
 
