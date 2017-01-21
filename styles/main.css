@@ -1,80 +1,7 @@
 @import url("normalize.css");
 @import url("fonts.css");
 @import url("grid.css");
-
-/*Set up base rules*/
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  font-family: "Proxima Nova Reg", sans-serif, Helvetica;
-  font-size: 16px;
-  line-height: 1.25em;
-  color: #222;
-}
-
-body {
-  width: 99.9%;
-  /*max-width: 1200px;*/
-}
-
-a {
-text-decoration: none;
-color: #ff4422;
-}
-
-a:focus {
-  border: none;
-}
-
-a:hover, a:active, a:focus:hover {
-text-decoration: underline;
-text-shadow: 0px 1px 0.5px #fd8a58;
-}
-
-/*Based on Robert's Bringhurst norms for phones and small tablets*/
-
-h1 {
-  font-family: 'Arvo', Trebuchet, serif;
-  font-size: 2.0em;
-}
-
-h2 {
-  font-family: 'Arvo', Trebuchet, serif;
-  font-size: 1.625em;
-  line-height: 1.15384615em;
-}
-
-h3 {
-  font-family: 'Arvo', Trebuchet, serif;
-  font-size: 1.375em;
-  line-height: 1.13636364em;
-}
-
-/*Classes for different font styles*/
-.bold {
-  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
-}
-
-.light {
-  font-family: "Proxima Nova Light", Helvetica, sans-serif;
-}
-
-.italic {
-  font-family: "Proxima Nova Reg It", Helvetica, sans-serif;
-}
-
-.bold-italic {
-  font-family: "Proxima Nova Bold It", Helvetica, sans-serif;
-}
-
-.light-italic {
-  font-family: "Proxima Nova Light It", Helvetica, sans-serif;
-}
+@import url("base.css");
 
 /* Window loading icon until the page has fully loaded*/
 #window-loading-cover {
@@ -211,7 +138,6 @@ body.scrolled .banner {
   text-shadow: 0 0.5px 0 #111;
 }
 
-
 .about-container__links {
   text-align: center;
 }
@@ -227,7 +153,7 @@ body.scrolled .banner {
 }
 
 .about-container__link-button:hover, .about-container__link-button:active, .about-container__link-button:focus:hover {
-  font-weight: bold;
+  font-family: "Proxima Nova Bold", sans-serif, Helvetica;
   text-decoration: none;
   box-shadow: 1px 2px 1px #333;
 }
@@ -255,8 +181,43 @@ body.scrolled .banner {
   margin: 2em 0;
 }
 
+.project-container__figure {
+  position: relative;
+}
+
+.project-container__figure-description {
+  height: 90%;
+  width: 80%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.project-container__figure-cover {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-container__figure-cover {
+    background-color: rgba(255,255,255,0.6);
+    visibility: hidden;
+}
+
+.project-container__figure:hover .project-container__figure-cover {
+  visibility: visible;
+}
+
+.project-container__figure:active .project-container__figure-cover {
+  visibility: visible;
+}
+
 .project-container__figure img {
   width: 100%;
+  z-index: 1;
 }
 
 .project-container__figure figcaption {
