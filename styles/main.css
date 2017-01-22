@@ -339,15 +339,14 @@ body.scrolled .banner {
   .profile-details {
     max-width: 660px;
     font-size: 1.25em;
-    letter-spacing: 0.05em;
     margin: 1.5% auto;
     text-align: justify;
-    text-transform: 0 1 px 0 #333;
+    text-shadow: 0 1px 0 #333;
   }
 
   .profile-picture {
     width: 140px;
-    margin: 1.5% auto;
+    margin: 1% auto;
   }
 
   .project-container__figure-description {
@@ -372,6 +371,10 @@ body.scrolled .banner {
 
   .project-container__tech-icon {
     width: 40px;
+  }
+
+  .project-container__caption {
+    font-size: 1.25em;
   }
 }
 
