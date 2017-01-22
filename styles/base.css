@@ -9,7 +9,6 @@
 html {
   font-family: "Proxima Nova Reg", sans-serif, Helvetica;
   font-size: 16px;
-  line-height: 1.25em;
   color: #222;
 }
 
@@ -36,6 +35,7 @@ text-shadow: 0px 1px 0.5px #fd8a58;
 h1 {
   font-family: 'Arvo', Trebuchet, serif;
   font-size: 2.0em;
+  line-height: 1.25em;
 }
 
 h2 {
@@ -48,4 +48,10 @@ h3 {
   font-family: 'Arvo', Trebuchet, serif;
   font-size: 1.375em;
   line-height: 1.13636364em;
+}
+
+p {
+  font-family: "Proxima Nova Reg", sans-serif, Helvetica;
+  font-size: 1em;
+  line-height: 1.25em;
 }
