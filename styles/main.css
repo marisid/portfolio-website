@@ -226,7 +226,7 @@ body.scrolled .banner {
   min-height: 40px;
 }
 
-.project-container__figure-icon {
+.project-container__tech-icon {
   width: 40px;
   height: auto;
 }
@@ -355,7 +355,7 @@ body.scrolled .banner {
     line-height: 1rem;
   }
 
-  .project-container__figure-icon {
+  .project-container__tech-icon {
     width: 20px;
   }
 
@@ -370,7 +370,7 @@ body.scrolled .banner {
     line-height: 1.4em;
   }
 
-  .project-container__figure-icon {
+  .project-container__tech-icon {
     width: 40px;
   }
 }
