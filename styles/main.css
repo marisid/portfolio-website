@@ -1,7 +1,63 @@
 @import url("normalize.css");
 @import url("fonts.css");
 @import url("grid.css");
-@import url("base.css");
+
+/*Set up base rules*/
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Proxima Nova Reg", sans-serif, Helvetica;
+  font-size: 16px;
+  color: #222;
+}
+
+body {
+  width: 99.9%;
+}
+
+a {
+text-decoration: none;
+color: #ff4422;
+}
+
+a:focus {
+  border: none;
+}
+
+a:hover, a:active, a:focus:hover {
+text-decoration: underline;
+text-shadow: 0px 1px 0.5px #fd8a58;
+}
+
+/*Based on Robert's Bringhurst norms for phones and small tablets*/
+
+h1 {
+  font-family: 'Arvo', Trebuchet, serif;
+  font-size: 2.0em;
+}
+
+h2 {
+  font-family: 'Arvo', Trebuchet, serif;
+  font-size: 1.625em;
+  line-height: 1.15384615em;
+}
+
+h3 {
+  font-family: 'Arvo', Trebuchet, serif;
+  font-size: 1.375em;
+  line-height: 1.13636364em;
+}
+
+p {
+  font-family: "Proxima Nova Reg", sans-serif, Helvetica;
+  font-size: 1em;
+  line-height: 1.25em;
+}
 
 /* Window loading icon until the page has fully loaded*/
 #window-loading-cover {
@@ -241,6 +297,7 @@ body.scrolled .banner {
      clear: both;
      height: 0;
      }
+     
 .clearfix {
   display: inline-block;
   clear:both;
