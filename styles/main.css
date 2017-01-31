@@ -16,8 +16,8 @@
 
 .fa-spinner {
   position:relative;
-  top: calc(50% - 1.25em);
-  left: calc(50% - 1.25em);
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
   color: #ff4422;
 }
 
@@ -97,7 +97,6 @@ body.scrolled .banner {
 }
 
 /*Main content*/
-
 .container {
   width: 100%;
 }
@@ -173,7 +172,6 @@ body.scrolled .banner {
 }
 
 /*Project content*/
-
 .project-container__heading {
   color: #ff4422;
   padding-left: 10%;
@@ -241,6 +239,7 @@ body.scrolled .banner {
      clear: both;
      height: 0;
      }
+
 .clearfix {
   display: inline-block;
   clear:both;
