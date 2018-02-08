@@ -376,7 +376,3 @@ body.scrolled .banner {
     font-size: 1.25em;
   }
 }
-
-@media screen and (min-width: 1400px) {
-  html { font-size: 1.25em; }
-}
